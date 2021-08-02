@@ -3,11 +3,11 @@
   <title>qioh的随记</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://qioh.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://qioh.github.io/"/>
   <updated>2021-08-02T04:45:30.930Z</updated>
-  <id>http://example.com/</id>
+  <id>https://qioh.github.io/</id>
   
   <author>
     <name>祈qioh</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>code theory foundation</title>
-    <link href="http://example.com/2021/08/02/code-theory-foundation/"/>
-    <id>http://example.com/2021/08/02/code-theory-foundation/</id>
+    <link href="https://qioh.github.io/2021/08/02/code-theory-foundation/"/>
+    <id>https://qioh.github.io/2021/08/02/code-theory-foundation/</id>
     <published>2021-08-02T04:42:43.000Z</published>
     <updated>2021-08-02T04:45:30.930Z</updated>
     
@@ -27,16 +27,16 @@
     
     
     
-    <category term="Channel coding" scheme="http://example.com/tags/Channel-coding/"/>
+    <category term="Channel coding" scheme="https://qioh.github.io/tags/Channel-coding/"/>
     
-    <category term="Algebraic coding" scheme="http://example.com/tags/Algebraic-coding/"/>
+    <category term="Algebraic coding" scheme="https://qioh.github.io/tags/Algebraic-coding/"/>
     
   </entry>
   
   <entry>
     <title>Python学习日志</title>
-    <link href="http://example.com/2021/08/02/python/"/>
-    <id>http://example.com/2021/08/02/python/</id>
+    <link href="https://qioh.github.io/2021/08/02/python/"/>
+    <id>https://qioh.github.io/2021/08/02/python/</id>
     <published>2021-08-01T16:15:46.000Z</published>
     <updated>2021-08-02T14:21:12.546Z</updated>
     
@@ -48,14 +48,14 @@
     
     
     
-    <category term="-python -notes" scheme="http://example.com/tags/python-notes/"/>
+    <category term="-python -notes" scheme="https://qioh.github.io/tags/python-notes/"/>
     
   </entry>
   
   <entry>
     <title>something about hexo next</title>
-    <link href="http://example.com/2021/08/01/something-about-hexo-next/"/>
-    <id>http://example.com/2021/08/01/something-about-hexo-next/</id>
+    <link href="https://qioh.github.io/2021/08/01/something-about-hexo-next/"/>
+    <id>https://qioh.github.io/2021/08/01/something-about-hexo-next/</id>
     <published>2021-08-01T13:21:46.000Z</published>
     <updated>2021-08-02T14:13:42.831Z</updated>
     
@@ -72,14 +72,14 @@
     
     
     
-    <category term="-hexo -next" scheme="http://example.com/tags/hexo-next/"/>
+    <category term="-hexo -next" scheme="https://qioh.github.io/tags/hexo-next/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/08/01/hello-world/"/>
-    <id>http://example.com/2021/08/01/hello-world/</id>
+    <link href="https://qioh.github.io/2021/08/01/hello-world/"/>
+    <id>https://qioh.github.io/2021/08/01/hello-world/</id>
     <published>2021-08-01T05:30:51.012Z</published>
     <updated>2021-08-01T13:25:26.936Z</updated>
     
