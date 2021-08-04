@@ -1,171 +1,350 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Python学习日志</title>
-    <url>/2021/08/03/python/</url>
-    <content><![CDATA[<p>这是我学习python的历程,你将见证一个拖延症晚期的人最后的自律。<br>
-<span id="more"></span> 选用教材:Python编程:从入门到实践（第二版）（美）埃里克·马瑟斯[著] 袁国忠[译] 人民邮电出版社</p>
-<h1 id="初识python-变量">2021-8-2 初识python 变量</h1>
-<h2 id="运行python">运行python</h2>
-<p>下载python编译器(我的是3.9版本),利用cmd（命令提示符）输入python,出现<code>&gt;&gt;&gt;</code>即可使用或利用对应的软件,我使用了pycharm文本编辑器。 两个网址:</p>
-<blockquote>
-<p><a href="https://www.python.org/">python官网</a>:https://www.python.org/<br>
-<a href="https://www.jetbrains.com/pycharm/">pycharm官网</a>:https://www.jetbrains.com/pycharm/</p>
-</blockquote>
-<h2 id="变量">变量</h2>
-<h3 id="关于变量">关于变量</h3>
-<p>变量的命名需要满足以下规则</p>
-<blockquote>
-<ul>
-<li>组成:字母 数字(不能在首位) 下划线 [只有这些！！不要出现别的]</li>
-<li>不要用到python关键字和函数名</li>
-<li>慎用l(小写)和O(大写) [因为容易和数字1和0傻傻分不清]</li>
-</ul>
-</blockquote>
-<p>变量是可以赋给值的标签。[一个形象的称呼呢]</p>
-<h3 id="字符串变量">字符串变量</h3>
-<p>字符串的表示,用 "" '' 均可 <figure class="highlight python"><figcaption><span>字符串的赋值</span></figcaption><table><tr><td class="code"><pre><span class="line">message = <span class="string">'somthing "important"'</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>制表符: 换行符:</p>
-</blockquote>
-<p>可以利用方法对字符串进行处理: <figure class="highlight python"><figcaption><span>字符串的一些赋值处理</span></figcaption><table><tr><td class="code"><pre><span class="line">message1 = <span class="string">'aDc'</span></span><br><span class="line">message2 = <span class="string">'balance'</span></span><br><span class="line">message3 = <span class="string">' jhk '</span></span><br><span class="line"><span class="built_in">print</span>(message1.title()) <span class="comment">#首字母大写,其余全部小写</span></span><br><span class="line"><span class="built_in">print</span>(message1.upper()) <span class="comment">#全部字母大写</span></span><br><span class="line"><span class="built_in">print</span>(message1.lower()) <span class="comment">#全部字母小写</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"<span class="subst">{message1}</span><span class="subst">{message2}</span>"</span>) <span class="comment">#f字符串,将字符串联结</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"<span class="subst">{message3}</span><span class="subst">{message3}</span>"</span>) <span class="comment">#用于与下面对比</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"<span class="subst">{message3.rstrip()}</span><span class="subst">{message3}</span>"</span>)<span class="comment">#删除字符串末尾所有空格（右）</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(message3.lstrip())<span class="comment">#删除字符串开头所有空格（左）</span></span><br><span class="line"><span class="built_in">print</span>(message3.strip()) <span class="comment">#删除字符串开头和末尾的所有空格</span></span><br></pre></td></tr></table></figure> 上述的操作都不会更新变量本身的值,需要利用命令进行,如 <figure class="highlight python"><figcaption><span>更新字符串</span></figcaption><table><tr><td class="code"><pre><span class="line">message1 = message1.title()</span><br></pre></td></tr></table></figure> 其中有两个概念:</p>
-<ul>
-<li>f字符串:f(format),可以在字符串中插入变量的值,python将把花括号内的变量替换为其值。</li>
-<li>方法:python对数据执行的操作称为方法。</li>
-</ul>
-<p>f字符串还有其它使用的形式,例如: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">message = <span class="string">'acd'</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f"hello,<span class="subst">{message}</span>"</span>)</span><br></pre></td></tr></table></figure></p>
-<h3 id="整数与浮点数">整数与浮点数</h3>
-<p>整数可进行基本的数的运算,** 将表示乘方运算 <figure class="highlight python"><figcaption><span>乘和乘方</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="number">3</span> * <span class="number">3</span> <span class="comment">#9</span></span><br><span class="line"><span class="number">3</span> ** <span class="number">3</span> <span class="comment">#27</span></span><br></pre></td></tr></table></figure> Python将所有带小数点的数称为浮点数,这代表着小数点可以出现在数的任何位置上。编程语言需要保证无论小数点出现在什么位置,数的行为是正常的。 浮点数同样可以进行基本的数的运算,但是运算结果将有有效小数位数的限制,小数位数过多将导致计算结果不精确。（这是由计算机内部表示数的方式所导致的) 整数和浮点数在计算中会产生数据类型的转变,在python中遵循以下原则:</p>
-<ul>
-<li>除法(/)结果必然是浮点数</li>
-<li>所有运算中,只要操作数是浮点数,结果总是浮点数</li>
-</ul>
-<p>同时,在数中任意位置添加_不会影响它参与后面的使用.这样可以给数字分组,使数清晰易读。 <figure class="highlight python"><figcaption><span>_的使用</span></figcaption><table><tr><td class="code"><pre><span class="line">age = <span class="number">10_000_000</span></span><br></pre></td></tr></table></figure> _ 的位置是任意的,1000、1_000、10_00、100_0在操作中它们的值都会视为1000。</p>
-<h3 id="多变量赋值-常量">多变量赋值 常量</h3>
-<p>简单的多变量赋值如下: <figure class="highlight python"><figcaption><span>多变量赋值</span></figcaption><table><tr><td class="code"><pre><span class="line">x,y,z = <span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span> <span class="comment">#将依次赋值,x=0,y=1,z=2</span></span><br></pre></td></tr></table></figure> 关于常量,指在一个程序中永恒不变的量。python没有内置的常量类型,但我们可以将变量名字母全部大写用于标注,将其视为常量,提醒程序员在后续的操作中不得出现改变其值的命令。 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">CONSTANT = <span class="number">5000</span></span><br></pre></td></tr></table></figure> 最后</p>
-<h2 id="python之禅好高大上的名字由tim-peters撰写">python之禅（好高大上的名字,由Tim Peters撰写）</h2>
-<p>是在书写优秀python代码时普遍尊重的指导原则,在解释器中运行<code>import this</code>来获得这些原则。 列举一些教材中举例的<strong>python之禅</strong></p>
-<blockquote>
-<ul>
-<li>Beautiful is better than ugly.</li>
-<li>Simple is better than complex.</li>
-<li>Complex is better than complicated.</li>
-<li>Readability counts.</li>
-<li>There should be one--and preferably only one--obvious way to do it.</li>
-<li>Now is better than never</li>
-</ul>
-</blockquote>
-<p>总而言之,让你的代码尽量简单,易读(利用<code>#</code>来进行注释吧)。</p>
-<h1 id="列表">2021-8-3 列表</h1>
-<h2 id="创建列表">创建列表</h2>
-<p>列表用<code>[]</code>进行创建,利用索引访问列表元素(索引从0开始)。不妨将列表名写成复数形式来提醒自己。 <figure class="highlight python"><figcaption><span>列表的创建和访问列表元素</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'a'</span>] <span class="comment">#创建列表</span></span><br><span class="line"><span class="built_in">print</span>(alpybets)    <span class="comment">#打印列表</span></span><br><span class="line"><span class="built_in">print</span>(alpybets[<span class="number">0</span>]) <span class="comment">#利用索引访问列表元素,索引从0开始</span></span><br></pre></td></tr></table></figure> 索引可以为负数。-1代表列表最后一个元素,-2代表倒数第二个元素,依此类推。</p>
-<h2 id="列表元素的修改添加删除弹出">列表元素的修改、添加、删除(弹出)</h2>
-<h3 id="修改和添加">修改和添加</h3>
-<p>列表元素的修改利用赋值语句实现: <figure class="highlight python"><figcaption><span>列表元素的修改</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'e'</span>]</span><br><span class="line">alpybets[<span class="number">0</span>] = <span class="string">'f'</span> <span class="comment">#更换列表第一个元素</span></span><br></pre></td></tr></table></figure> 为列表添加元素,利用方法<code>append</code>为列表末尾附加元素,方法<code>insert</code>为列表任意位置添加元素,并使该索引后的元素均后移一个位置。 <figure class="highlight python"><figcaption><span>添加元素的两种方法</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [] <span class="comment">#可以创建空列表</span></span><br><span class="line">alpybets.append(<span class="string">'g'</span>) <span class="comment">#为列表添加元素g</span></span><br><span class="line">alpybets.append(<span class="string">'a'</span>) <span class="comment">#为列表末尾添加元素a</span></span><br><span class="line">alpybets.insert(<span class="number">1</span>,<span class="string">'b'</span>)<span class="comment">#为列表插入元素b,位于索引1的位置上</span></span><br></pre></td></tr></table></figure> 若利用print函数打印alpybet,运行结果为 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[g,b,a]</span><br></pre></td></tr></table></figure> 列表的大小是动态的,这在使用时有着极大的便利</p>
-<h3 id="删除">删除</h3>
-<h4 id="根据索引删除列表元素">根据索引删除列表元素</h4>
-<p>下面的两种方法可以删除指定位置(索引)的列表元素</p>
-<ul>
-<li>利用del语句删除元素,一旦删除某个元素,我们将无法再访问这个元素。</li>
-</ul>
-<figure class="highlight python"><figcaption><span>用del语句删除元素</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">del</span> alpybets[<span class="number">0</span>] <span class="comment">#删除列表的第一个元素</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>利用方法pop()删除元素,可以将被删除的元素赋给一个变量,以便再次访问它,故可以称其为弹出(pop)元素。方法pop()需要一个参数,即删除元素的索引。省略时表示弹出末尾元素,相当于pop(-1)</li>
-</ul>
-<figure class="highlight python"><figcaption><span>用方法pop()弹出元素</span></figcaption><table><tr><td class="code"><pre><span class="line">end_alpybet = alpybets.pop()    <span class="comment">#弹出列表末尾元素,并将其赋给end_alpybet</span></span><br><span class="line">first_alpybet = alpybets.pop(<span class="number">0</span>) <span class="comment">#弹出列表第一个元素,并将其赋给first_alpybet</span></span><br></pre></td></tr></table></figure>
-<h4 id="根据值删除列表元素">根据值删除列表元素</h4>
-<p>当你不知道所删除数据的索引,不妨利用方法remove()来删除数据,参数即所删除的字符串。当然,我们可以通过一些方法来保留所删除的数据,例如: <figure class="highlight python"><figcaption><span>利用remove删除数据</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'e'</span>]</span><br><span class="line">mid_alpy = <span class="string">'b'</span>       <span class="comment">#事先存储要删除的元素</span></span><br><span class="line">alpybets.remove(<span class="string">'d'</span>) <span class="comment">#这种方式无法保留删除元素d</span></span><br><span class="line">alpybets.remove(mid_alpy) <span class="comment">#也可通过变量来删除元素,被删除的元素提前放在了mid_alpy</span></span><br></pre></td></tr></table></figure> 要注意的时,remove()将只删除第一个指定的值！可以利用循环来满足我们的删除要求。</p>
-<h2 id="组织列表">组织列表</h2>
-<p>对列表的元素进行有规律的排序,可能会方便到我们的后续操作</p>
-<h3 id="永久排序">永久排序</h3>
-<p>永久排序将永远改变被排序的列表存储元素的顺序,使其无法恢复到原来的排列顺序。 <figure class="highlight python"><figcaption><span>利用方法sort()对列表永久排序,依据字母顺序排序</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'e'</span>]</span><br><span class="line">alpybets.sort()</span><br><span class="line"><span class="built_in">print</span>(alpybets)</span><br></pre></td></tr></table></figure> 运行结果: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'b'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]</span><br></pre></td></tr></table></figure></p>
-<h3 id="临时排序">临时排序</h3>
-<p>临时排序会保留列表本身元素的顺序,同时以特定的顺序呈现它们。 <figure class="highlight python"><figcaption><span>利用函数sorted()对列表临时排序,依据字母顺序排序</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'e'</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(alpybets))  <span class="comment">#排序</span></span><br><span class="line"><span class="built_in">print</span>(alpybets)          <span class="comment">#验证原列表的排列顺序不变</span></span><br></pre></td></tr></table></figure> 运行结果: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'b'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]</span><br><span class="line">[<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'e'</span>]</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>对于更加复杂的排序方式(如既有大写又有小写字母),代码要复杂的多,但是了解上面的知识是基础</p>
-</blockquote>
-<h3 id="倒序排序方法reverse">倒序排序:方法reverse()</h3>
-<p>方法reverse()是永久排序,它会反转列表元素的排列顺序。但是恢复原顺序也很简单,即再次反转排列顺序即可。 <figure class="highlight python"><figcaption><span>利用reverse()反转列表元素排列顺序</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets.reverse() <span class="comment">#反转</span></span><br><span class="line">alpybets.reverse() <span class="comment">#反转再反转,即恢复</span></span><br></pre></td></tr></table></figure> 同时.sort()和sorted()可以输入这样的参数:<code>reverse = True</code>,它们将以<strong>字母表的倒序</strong>来排列列表元素.</p>
-<h2 id="关于列表">关于列表</h2>
-<p>确定列表的长度(列表中含有多少元素),利用函数len()。 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">len</span>(alpybets)</span><br></pre></td></tr></table></figure> 在对列表操作时,要避免索引错误,即是否存在<code>差一错误</code>。目前有两个差一错误:</p>
-<ul>
-<li>索引从0开始,对空列表索引-1将会出错</li>
-<li>range(1:5),打印它将会是1,2,3,4</li>
-</ul>
-<blockquote>
-<p>如果我们备份一个列表,使用以下语句:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alpybets2 = alpybets</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>此时alpybets2将关联到alpybets所关联的列表,两个变量将会指向同一个列表。<br>
-在后面我们会知道应当执行下面命令:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">alpybets2 = alpybets[:]</span><br></pre></td></tr></table></figure>
-<h2 id="操作列表">操作列表</h2>
-<p>这是对列表的高级一些的操作。</p>
-<h3 id="for循环">for循环</h3>
-<p>for循环的执行代码如下: <figure class="highlight python"><figcaption><span>for循环</span></figcaption><table><tr><td class="code"><pre><span class="line">list_alpybet = [<span class="string">'Abc'</span>,<span class="string">'Bcd'</span>,<span class="string">'Cde'</span>]</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> list_alpybet:     <span class="comment">#for语句,不要忘记冒号</span></span><br><span class="line">	<span class="built_in">print</span>(element)       <span class="comment">#执行程序,循环体</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"End"</span>)             <span class="comment">#不在for循环之中了</span></span><br></pre></td></tr></table></figure> 这段代码,会从列表list的第一个元素开始,逐个运行for下面那行代码,直至遍历所有的元素。</p>
-<ul>
-<li>tip:不妨将列表名写作复数,将其单数形式代表元素写在for循环语句中</li>
-</ul>
-<p>for语句会将所有缩进的代码循环运行,对于没有缩进的代码将只运行一次。上面代码的运行结果如下: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Abc</span><br><span class="line">Bcd</span><br><span class="line">Cde</span><br><span class="line">End</span><br></pre></td></tr></table></figure> 如果我们将<code>print("End")</code>也进行缩进,则运行结果为: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Abc</span><br><span class="line">End</span><br><span class="line">Bcd</span><br><span class="line">End</span><br><span class="line">Cde</span><br><span class="line">End</span><br></pre></td></tr></table></figure> 这提示我们:不要忘记缩进,不要乱缩进</p>
-<h3 id="数值列表">数值列表</h3>
-<h4 id="数值列表的创建">数值列表的创建</h4>
-<p>数值列表就是存储数的列表,可以自己输入元素,我们也可以利用一些函数来生成数值列表。 <figure class="highlight python"><figcaption><span>函数range()</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">3</span>)</span><br><span class="line">	<span class="built_in">print</span>(value)</span><br></pre></td></tr></table></figure> 运行结果: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure> 这里差一。再如range(1,4)将返回数字1~ 3。函数range()的语法为: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">range</span>(start_value,end_value,step_size)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<ul>
-<li>函数range()可以指定步长(step size),省略则默认为1</li>
-<li>函数range()可以省略起始值(start value),省略则起始值为0</li>
-</ul>
-</blockquote>
-<p>利用返回值创建数值列表需要引进函数list() <figure class="highlight python"><figcaption><span>利用函数range()创建数值列表</span></figcaption><table><tr><td class="code"><pre><span class="line">numbers = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">6</span>))</span><br></pre></td></tr></table></figure> 这样就创建了一个数值列表:<code>[1,2,3,4,5]</code>。</p>
-<h4 id="列表解析">列表解析</h4>
-<blockquote>
-<p>列表解析将for循环和创建新元素的代码合并成一行,并自动附加新元素。</p>
-</blockquote>
-<p>首先来看一个简单的例子:创建一个列表,元素为:<span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.439ex" xmlns="http://www.w3.org/2000/svg" width="13.524ex" height="2.439ex" role="img" focusable="false" viewBox="0 -883.9 5977.7 1077.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mn" transform="translate(533,413) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(936.6,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msup" transform="translate(1381.2,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mn" transform="translate(533,413) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(2317.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mo" transform="translate(2762.4,0)"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mo" transform="translate(3207.1,0)"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mo" transform="translate(3651.8,0)"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mo" transform="translate(4096.4,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msup" transform="translate(4541.1,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="mn" transform="translate(1033,413) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> <figure class="highlight python"><figcaption><span>平方数列表</span></figcaption><table><tr><td class="code"><pre><span class="line">numbers = []</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>)</span><br><span class="line">	value2 = value**<span class="number">2</span></span><br><span class="line">	numbers.append(value2)</span><br><span class="line"><span class="built_in">print</span>(numbers)  <span class="comment">#用于展示</span></span><br></pre></td></tr></table></figure> 运行结果: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>, <span class="number">100</span>]</span><br></pre></td></tr></table></figure> 而列表解析只需要一条语句就能完成上述目的: <figure class="highlight python"><figcaption><span>平方解析</span></figcaption><table><tr><td class="code"><pre><span class="line">squares = [value**<span class="number">2</span> <span class="keyword">for</span> value <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>)]</span><br></pre></td></tr></table></figure></p>
-<h3 id="切片">切片</h3>
-<p>差一警告！ 假设有列表members,含有5个元素。创建切片,需要要用到的第一个元素和最后一个元素的索引。如我们需要members的前3个元素,利用下面的语句创建切片 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">members[<span class="number">0</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure> 它将返回列表索引为0,1,2的元素</p>
-<ul>
-<li>省略起始索引,则从列表开头开始</li>
-<li>省略终止索引,则从起始索引开始,一直到列表末尾</li>
-<li>省略起始和终止索引,则表示整个列表的切片</li>
-<li>可再给予一个参数,表示步长</li>
-</ul>
-<p>切片的使用和列表相同,将列表名改为切片即可。</p>
-<blockquote>
-<p>列表的复制,不能简单的使用语句<code>copy_members = members</code>,这将导致两个变量指向同一个列表,对任意一个变量进行操作都会导致列表的改变,并没有起到复制的作用。要实现列表的复制,需要利用到切片:</p>
-</blockquote>
-<figure class="highlight python"><figcaption><span>复制列表</span></figcaption><table><tr><td class="code"><pre><span class="line">copy_members = members[:]</span><br></pre></td></tr></table></figure>
-<h3 id="列表元素的一些简单统计命令">列表元素的一些简单统计命令</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>digits = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>:<span class="number">11</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">min</span>(digits) <span class="comment">#最小值</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">max</span>(digits) <span class="comment">#最大值</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">sum</span>(digits) <span class="comment">#求和</span></span><br><span class="line"><span class="number">55</span></span><br></pre></td></tr></table></figure>
-<h2 id="元组">元组</h2>
-<blockquote>
-<p>Python将不能修改的值称为不可变的,而不可变的列表被称为元组,其值在整个程序中不变。</p>
-</blockquote>
-<p>元组的创建用(),其中元素用逗号隔开,如: <figure class="highlight python"><figcaption><span>一个简单的元组</span></figcaption><table><tr><td class="code"><pre><span class="line">dims = (<span class="number">50</span>,<span class="number">100</span>)</span><br></pre></td></tr></table></figure> 我们可以利用索引来访问对应位置的元素。元组的元素使用与列表相同,只是不能出现对某个元素值的修改。但是我们可以修改整个元组变量: <figure class="highlight python"><figcaption><span>修改元组变量</span></figcaption><table><tr><td class="code"><pre><span class="line">dims = (<span class="number">50</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(dims)</span><br><span class="line">dims = (<span class="number">80</span>,<span class="number">90</span>)</span><br><span class="line"><span class="built_in">print</span>(dims)</span><br></pre></td></tr></table></figure> 运行结果: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">(<span class="number">50</span>,<span class="number">100</span>)</span><br><span class="line">(<span class="number">80</span>,<span class="number">90</span>)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>元组是由逗号(,)标识的,括号只是为了让它清晰。如果想创建一个单元素元组,则需要如下定义:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dims = (<span class="number">100</span>,)</span><br></pre></td></tr></table></figure>
-<h2 id="代码格式">代码格式</h2>
-<p>大家都遵循一些代码格式的约定,将便于合作,理解对方的代码。PEP 8(Python Enhancement Proposal,PEP)向Python程序员提供了代码格式设置指南。这里同样列举几个教材中提醒的设置:</p>
-<blockquote>
-<ul>
-<li>缩进用4个空格(设置好后即为一个Tab键),不要插入制表符</li>
-<li>每行不超过79字符</li>
-<li>合理使用空行,即使空行不会影响代码的运行</li>
-</ul>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>-python -notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Coding theory foundation</title>
-    <url>/2021/08/02/coding-theory-foundation/</url>
-    <content><![CDATA[<p>This is about the basics of channel coding! o(*￣▽￣*)ブ <span id="more"></span></p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"qioh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="This is about the basics of channel coding! o(*￣▽￣*)ブ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coding theory foundation">
+<meta property="og:url" content="https://qioh.github.io/2021/08/02/coding-theory-foundation/index.html">
+<meta property="og:site_name" content="qioh的随记">
+<meta property="og:description" content="This is about the basics of channel coding! o(*￣▽￣*)ブ">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-02T04:42:43.000Z">
+<meta property="article:modified_time" content="2021-08-04T15:26:04.207Z">
+<meta property="article:author" content="祈qioh">
+<meta property="article:tag" content="Channel coding">
+<meta property="article:tag" content="Algebraic coding">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://qioh.github.io/2021/08/02/coding-theory-foundation/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://qioh.github.io/2021/08/02/coding-theory-foundation/","path":"2021/08/02/coding-theory-foundation/","title":"Coding theory foundation"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Coding theory foundation | qioh的随记</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="qioh的随记" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">qioh的随记</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-codes"><span class="nav-text">Linear codes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-linear-codes"><span class="nav-text">What is linear codes?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bases-and-matrixs"><span class="nav-text">Bases and matrixs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-find-the-bases"><span class="nav-text">how to find the bases</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">祈qioh</p>
+  <div class="site-description" itemprop="description">这是我每次收获新知识的感悟，要把它变成习惯</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+          </div>
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qioh.github.io/2021/08/02/coding-theory-foundation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="祈qioh">
+      <meta itemprop="description" content="这是我每次收获新知识的感悟，要把它变成习惯">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qioh的随记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Coding theory foundation
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-02 12:42:43" itemprop="dateCreated datePublished" datetime="2021-08-02T12:42:43+08:00">2021-08-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-08-04 23:26:04" itemprop="dateModified" datetime="2021-08-04T23:26:04+08:00">2021-08-04</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>This is about the basics of channel coding! o(*￣▽￣*)ブ <span id="more"></span></p>
 <h1 id="linear-codes">Linear codes</h1>
 <h2 id="what-is-linear-codes">What is linear codes?</h2>
 <blockquote>
@@ -237,106 +416,129 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
 </ul>
 <p><span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -6.9ex" xmlns="http://www.w3.org/2000/svg" width="32.18ex" height="14.932ex" role="img" focusable="false" viewBox="0 -3550 14223.6 6600"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mrow"><g data-mml-node="mo"><path data-c="23A1" d="M319 -645V1154H666V1070H403V-645H319Z" transform="translate(0,2396)"></path><path data-c="23A3" d="M319 -644V1155H403V-560H666V-644H319Z" transform="translate(0,-2406)"></path><svg width="667" height="3202" y="-1351" x="0" viewBox="0 800.5 667 3202"><path data-c="23A2" d="M319 0V602H403V0H319Z" transform="scale(1,7.978)"></path></svg></g><g data-mml-node="mtable" transform="translate(667,0)"><g data-mml-node="mtr" transform="translate(0,2800)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,1400)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,0)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,-1400)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,-2800)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g><g data-mml-node="mo" transform="translate(5667,0)"><path data-c="23A4" d="M0 1070V1154H347V-645H263V1070H0Z" transform="translate(0,2396)"></path><path data-c="23A6" d="M263 -560V1155H347V-644H0V-560H263Z" transform="translate(0,-2406)"></path><svg width="667" height="3202" y="-1351" x="0" viewBox="0 800.5 667 3202"><path data-c="23A5" d="M263 0V602H347V0H263Z" transform="scale(1,7.978)"></path></svg></g></g><g data-mml-node="mo" transform="translate(6611.8,0)"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g><g data-mml-node="mrow" transform="translate(7889.6,0)"><g data-mml-node="mo"><path data-c="23A1" d="M319 -645V1154H666V1070H403V-645H319Z" transform="translate(0,2396)"></path><path data-c="23A3" d="M319 -644V1155H403V-560H666V-644H319Z" transform="translate(0,-2406)"></path><svg width="667" height="3202" y="-1351" x="0" viewBox="0 800.5 667 3202"><path data-c="23A2" d="M319 0V602H403V0H319Z" transform="scale(1,7.978)"></path></svg></g><g data-mml-node="mtable" transform="translate(667,0)"><g data-mml-node="mtr" transform="translate(0,2800)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,1400)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,0)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,-1400)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g><g data-mml-node="mtr" transform="translate(0,-2800)"><g data-mml-node="mtd"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(1500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(3000,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g><g data-mml-node="mtd" transform="translate(4500,0)"><g data-mml-node="mn"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g><g data-mml-node="mo" transform="translate(5667,0)"><path data-c="23A4" d="M0 1070V1154H347V-645H263V1070H0Z" transform="translate(0,2396)"></path><path data-c="23A6" d="M263 -560V1155H347V-644H0V-560H263Z" transform="translate(0,-2406)"></path><svg width="667" height="3202" y="-1351" x="0" viewBox="0 800.5 667 3202"><path data-c="23A5" d="M263 0V602H347V0H263Z" transform="scale(1,7.978)"></path></svg></g></g></g></g></svg></mjx-container></span> Now we have another matrix in REF. The original columns of A corresponding to these leading columns form a basis for C,whose elements do always come from the set <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex" xmlns="http://www.w3.org/2000/svg" width="1.459ex" height="1.645ex" role="img" focusable="false" viewBox="0 -705 645 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D446" d="M308 24Q367 24 416 76T466 197Q466 260 414 284Q308 311 278 321T236 341Q176 383 176 462Q176 523 208 573T273 648Q302 673 343 688T407 704H418H425Q521 704 564 640Q565 640 577 653T603 682T623 704Q624 704 627 704T632 705Q645 705 645 698T617 577T585 459T569 456Q549 456 549 465Q549 471 550 475Q550 478 551 494T553 520Q553 554 544 579T526 616T501 641Q465 662 419 662Q362 662 313 616T263 510Q263 480 278 458T319 427Q323 425 389 408T456 390Q490 379 522 342T554 242Q554 216 546 186Q541 164 528 137T492 78T426 18T332 -20Q320 -22 298 -22Q199 -22 144 33L134 44L106 13Q83 -14 78 -18T65 -22Q52 -22 52 -14Q52 -11 110 221Q112 227 130 227H143Q149 221 149 216Q149 214 148 207T144 186T142 153Q144 114 160 87T203 47T255 29T308 24Z"></path></g></g></g></svg></mjx-container></span>.<br>
 For the question,a basis for C is <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex" xmlns="http://www.w3.org/2000/svg" width="21.243ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 9389.3 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="7B" d="M434 -231Q434 -244 428 -250H410Q281 -250 230 -184Q225 -177 222 -172T217 -161T213 -148T211 -133T210 -111T209 -84T209 -47T209 0Q209 21 209 53Q208 142 204 153Q203 154 203 155Q189 191 153 211T82 231Q71 231 68 234T65 250T68 266T82 269Q116 269 152 289T203 345Q208 356 208 377T209 529V579Q209 634 215 656T244 698Q270 724 324 740Q361 748 377 749Q379 749 390 749T408 750H428Q434 744 434 732Q434 719 431 716Q429 713 415 713Q362 710 332 689T296 647Q291 634 291 499V417Q291 370 288 353T271 314Q240 271 184 255L170 250L184 245Q202 239 220 230T262 196T290 137Q291 131 291 1Q291 -134 296 -147Q306 -174 339 -192T415 -213Q429 -213 431 -216Q434 -219 434 -231Z"></path></g><g data-mml-node="mn" transform="translate(500,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(1000,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1500,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(2000,0)"></path></g><g data-mml-node="mo" transform="translate(3000,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(3444.7,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(1000,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(1500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(2000,0)"></path></g><g data-mml-node="mo" transform="translate(5944.7,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mn" transform="translate(6389.3,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(1000,0)"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(1500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(2000,0)"></path></g><g data-mml-node="mo" transform="translate(8889.3,0)"><path data-c="7D" d="M65 731Q65 745 68 747T88 750Q171 750 216 725T279 670Q288 649 289 635T291 501Q292 362 293 357Q306 312 345 291T417 269Q428 269 431 266T434 250T431 234T417 231Q380 231 345 210T298 157Q293 143 292 121T291 -28V-79Q291 -134 285 -156T256 -198Q202 -250 89 -250Q71 -250 68 -247T65 -230Q65 -224 65 -223T66 -218T69 -214T77 -213Q91 -213 108 -210T146 -200T183 -177T207 -139Q208 -134 209 3L210 139Q223 196 280 230Q315 247 330 250Q305 257 280 270Q225 304 212 352L210 362L209 498Q208 635 207 640Q195 680 154 696T77 713Q68 713 67 716T65 731Z"></path></g></g></g></svg></mjx-container></span>.</p>
-]]></content>
-      <tags>
-        <tag>Channel coding</tag>
-        <tag>Algebraic coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>something about hexo next</title>
-    <url>/2021/08/01/something-about-hexo-next/</url>
-    <content><![CDATA[<p>Two useful websites: 1. <a href="https://blog.csdn.net/zhuzhuyule/article/details/58347687">Writing an article</a> 2. <a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502?utm_term=next%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81%E6%A1%86&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-3-86661502&amp;spm=3001.4430">The advanced settings of theme "Next"</a></p>
-<p>I will use <strong><em>language of Markdown</em></strong>.(maybe I need to learn html grammar (╯▽╰)) <span id="more"></span></p>
-<h1 id="about-font">1 about font</h1>
-<h2 id="about-title">1.1 about title</h2>
-<p>use '#' to create title,and use one more '#' to create subtitles.</p>
-<h2 id="about-special-font">1.2 about special font</h2>
-<figure class="highlight bash"><figcaption><span>bold\italic\strikethrough</span></figcaption><table><tr><td class="code"><pre><span class="line">**bash**     //bash font</span><br><span class="line">*italic*  //italic font</span><br><span class="line">***bash and italic*** //Both</span><br><span class="line">~~strikethrough~~ //strikethrough</span><br></pre></td></tr></table></figure>
-<p>and we can hance: &gt; <strong>bash</strong>,<em>italic</em>,<strong><em>bash and italic</em></strong>,and <del>strikethrough</del></p>
-<h2 id="about-emphasize">1.3 about emphasize</h2>
-<figure class="highlight bash"><figcaption><span>highlight</span></figcaption><table><tr><td class="code"><pre><span class="line">`like this highlight`</span><br></pre></td></tr></table></figure>
-<p>The result:</p>
-<blockquote>
-<p><code>like this highlihgt</code></p>
-</blockquote>
-<h1 id="about-block">2 about block</h1>
-<h2 id="codeblock">2.1 codeblock</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">``` bash title</span><br><span class="line">like this!</span><br><span class="line">use more '`' to have a nestification</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-<h2 id="quoteblock">2.2 quoteblock</h2>
-<figure class="highlight bash"><figcaption><span>quoteblock code</span></figcaption><table><tr><td class="code"><pre><span class="line">&gt; you create a quoteblock!   //we just need this <span class="string">'&gt;'</span>\</span><br><span class="line">&gt;&gt; you can also use more <span class="string">'&gt;'</span> to create a nestification</span><br><span class="line"></span><br><span class="line">&gt; use 2 <span class="string">'enter'</span> to stop the quote</span><br></pre></td></tr></table></figure>
-<p>just like this:</p>
-<blockquote>
-<p>you create a quoteblock! //we just need thie '&gt;'<br>
-</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>you can also use more '&gt;' to create a nestification</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>use 2 'enter' to stop the quote</p>
-</blockquote>
-<h2 id="table">2.3 table</h2>
-<figure class="highlight bash"><figcaption><span>table like 3*3</span></figcaption><table><tr><td class="code"><pre><span class="line">| left | center | right |</span><br><span class="line">| :--  | :--:   |  --:  | </span><br><span class="line">| a    |    b   |     c |</span><br></pre></td></tr></table></figure>
-<p>just like this:</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">left</th>
-<th style="text-align: center;">center</th>
-<th style="text-align: right;">right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">a</td>
-<td style="text-align: center;">b</td>
-<td style="text-align: right;">c</td>
-</tr>
-</tbody>
-</table>
-<h2 id="sequence">2.4 sequence</h2>
-<figure class="highlight bash"><figcaption><span>unordered sequence</span></figcaption><table><tr><td class="code"><pre><span class="line">* use<span class="string">'\*'</span><span class="string">'+'</span><span class="string">'-'</span>to create a unordered sequence</span><br><span class="line">  * use some spaces to creat subsequence</span><br><span class="line">* just <span class="keyword">for</span> example</span><br></pre></td></tr></table></figure>
-<p>look this:</p>
-<blockquote>
-<ul>
-<li>use"*"+''-'to create a unordered sequence<br>
 
+    </div>
+
+    
+    
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------你再怎么看都没了哦，The end-------------</div>
+    
+</div>
+  
+</div>
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
 <ul>
-<li>use some spaces to creat subsequence<br>
-</li>
-</ul></li>
-<li>just for example<br>
-</li>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>qioh
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://qioh.github.io/2021/08/02/coding-theory-foundation/" title="Coding theory foundation">https://qioh.github.io/2021/08/02/coding-theory-foundation/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-</blockquote>
-<figure class="highlight bash"><figcaption><span>ordered sequence</span></figcaption><table><tr><td class="code"><pre><span class="line">1. this is a sequence</span><br><span class="line">  1. one space,one <span class="string">'sub'</span></span><br><span class="line">1. there isn<span class="string">'t third subsequence  </span></span><br></pre></td></tr></table></figure>
-<p>result:</p>
-<blockquote>
-<ol type="1">
-<li>this is a sequence<br>
+</div>
 
-<ol type="1">
-<li>one space,one 'sub'<br>
-</li>
-</ol></li>
-<li>there isn't third subsequence</li>
-</ol>
-</blockquote>
-<h1 id="link">3.link</h1>
-<figure class="highlight bash"><figcaption><span>link</span></figcaption><table><tr><td class="code"><pre><span class="line">A useful website:https://blog.csdn.net/zhuzhuyule/article/details/58347687</span><br><span class="line">or like [website](https://blog.csdn.net/zhuzhuyule/article/details/58347687)</span><br></pre></td></tr></table></figure>
-<p>and: A useful website:https://blog.csdn.net/zhuzhuyule/article/details/58347687 or like <a href="https://blog.csdn.net/zhuzhuyule/article/details/58347687">website</a></p>
-<h1 id="mathtype">4.mathtype</h1>
-<p>First,add 'mathjax: true' on the top,then it's like latex grammar. like this:</p>
-<blockquote>
-<p><span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -2.128ex" xmlns="http://www.w3.org/2000/svg" width="3.726ex" height="5.165ex" role="img" focusable="false" viewBox="0 -1342 1646.8 2282.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(573.4,676)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="msubsup" transform="translate(220,-686)"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="mi" transform="translate(536,289) scale(0.707)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(536,-247) scale(0.707)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g><rect width="1406.8" height="60" x="120" y="220"></rect></g></g></g></svg></mjx-container></span></p>
-</blockquote>
-<p>That is all! And don't forget "space"! And it will keep updating!</p>
-]]></content>
-      <tags>
-        <tag>-hexo -next</tag>
-      </tags>
-  </entry>
-</search>
+          <div class="post-tags">
+              <a href="/tags/Channel-coding/" rel="tag"># Channel coding</a>
+              <a href="/tags/Algebraic-coding/" rel="tag"># Algebraic coding</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/01/something-about-hexo-next/" rel="prev" title="something about hexo next">
+                  <i class="fa fa-chevron-left"></i> something about hexo next
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/08/03/python/" rel="next" title="Python学习日志">
+                  Python学习日志 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">祈qioh</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
