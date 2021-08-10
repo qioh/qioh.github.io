@@ -182,7 +182,7 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
     <url>/2021/08/05/python_learning/</url>
     <content><![CDATA[<p>这是我学习python的历程,你将见证一个拖延症晚期的人最后的自律。<br>
 <span id="more"></span> 选用教材:Python编程:从入门到实践（第二版）（美）埃里克·马瑟斯[著] 袁国忠[译] 人民邮电出版社</p>
-<h1 id="初识python-变量">2021-8-2 初识python 变量</h1>
+<h1 id="初识python-变量">初识python 变量</h1>
 <h2 id="运行python">运行python</h2>
 <p>下载python编译器(我的是3.9版本),利用cmd（命令提示符）输入python,出现<code>&gt;&gt;&gt;</code>即可使用或利用对应的软件,我使用了pycharm文本编辑器。 两个网址:</p>
 <blockquote>
@@ -233,7 +233,7 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
 </ul>
 </blockquote>
 <p>总而言之,让你的代码尽量简单,易读(利用<code>#</code>来进行注释吧)。</p>
-<h1 id="列表">2021-8-3 列表</h1>
+<h1 id="列表">列表</h1>
 <h2 id="创建列表">创建列表</h2>
 <p>列表用<code>[]</code>进行创建,利用索引访问列表元素(索引从0开始)。不妨将列表名写成复数形式来提醒自己。 <figure class="highlight python"><figcaption><span>列表的创建和访问列表元素</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'a'</span>] <span class="comment">#创建列表</span></span><br><span class="line"><span class="built_in">print</span>(alpybets)    <span class="comment">#打印列表</span></span><br><span class="line"><span class="built_in">print</span>(alpybets[<span class="number">0</span>]) <span class="comment">#利用索引访问列表元素,索引从0开始</span></span><br></pre></td></tr></table></figure> 索引可以为负数。-1代表列表最后一个元素,-2代表倒数第二个元素,依此类推。</p>
 <h2 id="列表元素的修改添加删除弹出">列表元素的修改、添加、删除(弹出)</h2>
@@ -334,7 +334,7 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
 <li>合理使用空行,即使空行不会影响代码的运行</li>
 </ul>
 </blockquote>
-<h1 id="if语句">2021-8-5 if语句</h1>
+<h1 id="if语句">if语句</h1>
 <h2 id="条件测试">条件测试</h2>
 <blockquote>
 <p>值为True或False的表达式称为<strong>条件测试</strong>(<strong>布尔表达式</strong>)。</p>
@@ -369,7 +369,7 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
 <h3 id="if语句的pep-8建议">if语句的PEP 8建议</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> a &lt; b: <span class="comment">#比较运算符两边各加一个空格</span></span><br></pre></td></tr></table></figure>
 <p>要比 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> a&lt;b:</span><br></pre></td></tr></table></figure> 更好。</p>
-<h1 id="字典-用户输入与while循环-函数">2021-8-6 字典 用户输入与while循环 函数</h1>
+<h1 id="字典-用户输入与while循环-函数">字典 用户输入与while循环 函数</h1>
 <h2 id="字典">字典</h2>
 <h3 id="字典的创建">字典的创建</h3>
 <p>用花括号<code>{}</code>和键值对来创建字典: <figure class="highlight python"><figcaption><span>创建字典</span></figcaption><table><tr><td class="code"><pre><span class="line">alien = {<span class="string">'color'</span>:<span class="string">'red'</span>,<span class="string">'points'</span>:<span class="number">5</span>}</span><br><span class="line">empty = {} <span class="comment">#创建空字典</span></span><br></pre></td></tr></table></figure> 访问字典中与键相关联的值,用<code>[]</code>内放入键的方式来完成: <figure class="highlight python"><figcaption><span>用键来访问关联值</span></figcaption><table><tr><td class="code"><pre><span class="line">alien_color = alien[<span class="string">'color'</span>]</span><br></pre></td></tr></table></figure> 添加键值对,类似访问的方法进行创建 <figure class="highlight python"><figcaption><span>添加键值对</span></figcaption><table><tr><td class="code"><pre><span class="line">alien[<span class="string">'x_position'</span>] = <span class="number">0</span></span><br><span class="line">alien[<span class="string">'y_position'</span>] = <span class="number">1</span></span><br></pre></td></tr></table></figure> 字典将按照顺序,在字典末尾依次添加键值对。 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(alien)</span><br><span class="line">{<span class="string">'color'</span>:<span class="string">'red'</span>,<span class="string">'points'</span>:<span class="number">5</span>,<span class="string">'x_position'</span>:<span class="number">0</span>,<span class="string">'y_position'</span>:<span class="number">1</span> }</span><br></pre></td></tr></table></figure> 我们还可以随时修改键对应的值: <figure class="highlight python"><figcaption><span>修改键对值</span></figcaption><table><tr><td class="code"><pre><span class="line">alien[<span class="string">'color'</span>] = <span class="string">'green'</span></span><br></pre></td></tr></table></figure> 以及删除键值对: <figure class="highlight python"><figcaption><span>删除键值对(无法再次访问)</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">del</span> alien[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure> 最后,如果一个字典由类似的对象组成,我们可以采用这种格式来提高代码的可阅读性: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages = {</span><br><span class="line">	<span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">	<span class="string">'sarah'</span>:<span class="string">'C'</span>,</span><br><span class="line">	<span class="string">'phil'</span>:<span class="string">'python'</span>,</span><br><span class="line">	}</span><br></pre></td></tr></table></figure></p>
@@ -568,7 +568,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 </ul>
 <figure class="highlight python"><figcaption><span>(/)的举例</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function_name</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">			parameter_0, parameter_1, parameter_2,</span></span></span><br><span class="line"><span class="params"><span class="function">			parameter_3, parameter_4, parameter_5</span>):</span></span><br><span class="line">function body...</span><br></pre></td></tr></table></figure>
 <p>编写函数具有众多的优点,也让一个问题的解决步骤化,模块化,更加清晰。程序修改、测试与维护也因函数的使用变得方便,清晰明了。</p>
-<h1 id="类">2021-8-8 类</h1>
+<h1 id="类">类</h1>
 <p>这应该是最复杂的数据结构了。。。让我们开始吧。<br>
 面向对象编程中,我们将编写<strong>类</strong>来创建对象。</p>
 <blockquote>
@@ -676,7 +676,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <h2 id="自定义工作流程">自定义工作流程</h2>
 <p>先写模块,再写主程序,还是反过来的代码组织方式都将由你决定。选择你最喜欢的方式,也请熟悉python中的选项,这样你才能确定哪种项目组织方式是最佳的,并能理解别人开发的项目。在最后,请回顾你写的代码,并做出改进。</p>
 <p>至此,python基础知识中的数据类型和数据结构就已经全部展示了。下面是python对于文件与测试的相关阐述。</p>
-<h1 id="文件-异常-测试">2021-8-10 文件 异常 测试</h1>
+<h1 id="文件-异常-测试">文件 异常 测试</h1>
 <h2 id="文件">文件</h2>
 <h3 id="文件路径的使用">文件路径的使用</h3>
 <ul>
