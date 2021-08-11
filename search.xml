@@ -180,7 +180,8 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
   <entry>
     <title>python基础</title>
     <url>/2021/08/05/python_learning/</url>
-    <content><![CDATA[<p>这是我学习python的历程,你将见证一个拖延症晚期的人最后的自律。 <span id="more"></span> 选用教材: Python编程:从入门到实践(第二版) (美)埃里克·马瑟斯[著] 袁国忠[译] 人民邮电出版社</p>
+    <content><![CDATA[<p>这是我学习python的历程,你将见证一个拖延症晚期的人最后的自律。<br>
+<span id="more"></span> 选用教材: 《Python编程:从入门到实践(第二版)》 (美)埃里克·马瑟斯[著] 袁国忠[译] 人民邮电出版社</p>
 <h1 id="初识python-变量">初识python 变量</h1>
 <h2 id="运行python">运行python</h2>
 <p>下载python编译器(我的是3.9版本),利用cmd（命令提示符）输入python,出现<code>&gt;&gt;&gt;</code>即可使用或利用对应的软件,我使用了pycharm文本编辑器。 两个网址:</p>
