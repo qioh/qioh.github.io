@@ -949,11 +949,11 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 </ul>
 <p>每次测试类,我们都需要创建一个实例,并在每个方法中都创建答案。方法setUp()让我们只需要创建这些对象一次,就能在每个测试方法中使用它们。<br>
 若TestCase类(继承了unittest.TestCase类)中包含了方法setUp(),python将先运行它,再运行其它方法。故在编写的每个测试中都可使用在方法setUp()中创建的对象。 举个例子: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Survey</span>:</span></span><br><span class="line">	--snip--</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test_survey</span>(<span class="params">unittest.TestCase</span>):</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">setUp</span>(<span class="params">self</span>):</span></span><br><span class="line">		<span class="string">"""创建一个调查对象和一组答案,以供测试方法使用"""</span></span><br><span class="line">		self.my_survey = Survey()</span><br><span class="line">		self.responses = [<span class="string">'Chinese'</span>,<span class="string">'English'</span>,<span class="string">'Mandarin'</span>]</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_store_responses</span>(<span class="params">self</span>):</span></span><br><span class="line">		<span class="string">"""测试方法store_response()是否能够妥善存储多个答案"""</span></span><br><span class="line">		<span class="keyword">for</span> response <span class="keyword">in</span> self.responses:</span><br><span class="line">			self.my_survey.store_response(response)</span><br><span class="line">		<span class="keyword">for</span> response <span class="keyword">in</span> self.responses:</span><br><span class="line">			self.assertIn(response,self.my_survey.responses)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main()</span><br></pre></td></tr></table></figure> 活用方法setUp()将带来不少便利。</p>
-<p>最后,在某些编辑器里进行测试,测试显示结果可能为:句点(.),E,F</p>
+<p>最后,python默认的文本编辑器(IDLE(Python))里进行测试,测试显示结果为:句点(.),E,F</p>
 <ul>
 <li>测试通过时打印一个句点(.);</li>
-<li>测试引发错误时打印一个E;</li>
-<li>测试导致断言失败时则打印一个F。</li>
+<li>测试引发错误时打印一个E,并停止余下测试,返回一条Traceback;</li>
+<li>测试导致断言失败时则打印一个F,并指出断言失败的测试名,返回一条Traceback。</li>
 </ul>
 <h1 id="查看模块的文档和帮助信息">查看模块的文档和帮助信息</h1>
 <p>当使用一个模块时,我们希望了解模块的帮助文档以便我们使用模块中的内容.</p>
@@ -974,7 +974,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <li>Python documentation (python官方文档)</li>
 </ul>
 <p>登录python官网，点击最上方栏中的<code>Docs</code>来查看它吧。</p>
-<p>在需要时去查看这些文档和帮助吧，可能能解决不少问题。</p>
+<p>在需要时去查看这些文档和帮助吧,也许能解决不少问题。</p>
 <h1 id="尾言">尾言</h1>
 <p>至此,python的基础知识就全部介绍完了。关于python的项目,有生之年吧(〟-_・)ﾝ<br>
 还是要再次推荐这本教材(Python编程:从入门到实践（第二版）（美）埃里克·马瑟斯[著]),语言容易理解,有大量的实例可以思考。<br>
