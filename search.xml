@@ -189,6 +189,8 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
 <p><a href="https://www.python.org/">python官网</a>:https://www.python.org/<br>
 <a href="https://www.jetbrains.com/pycharm/">pycharm官网</a>:https://www.jetbrains.com/pycharm/</p>
 </blockquote>
+<p>你可以在文本编辑器pycharm内书写和运行python代码，或在命令提示符(cmd)中使用python命令: 首先转到你安装python解释器的存储盘，然后输入python并回车。若出现<code>&gt;&gt;&gt;</code>则说明在cmd中运行python成功！然后你就可以开始利用它来运行一些python命令了。[若没有出现，请检查你的python解释器是否安装成功 或 是否在当前存储盘] <figure class="highlight cmd"><figcaption><span>利用cmd运行python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">admin</span>&gt;<span class="title">D</span>:    #我安装在了<span class="title">D</span>盘</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">D</span>:\&gt;<span class="title">python</span></span></span><br><span class="line"><span class="function"><span class="title">Python</span> 3.9.6 (<span class="title">tags</span>/<span class="title">v3</span>.9.6:<span class="title">db3ff76</span>, <span class="title">Jun</span> 28 2021, 15:26:21) [<span class="title">MSC</span> <span class="title">v</span>.1929 64 <span class="title">bit</span> (<span class="title">AMD64</span>)] <span class="title">on</span> <span class="title">win32</span></span></span><br><span class="line"><span class="function"><span class="title">Type</span> "<span class="title">help</span>", "<span class="title">copyright</span>", "<span class="title">credits</span>" <span class="title">or</span> "<span class="title">license</span>" <span class="title">for</span> <span class="title">more</span> <span class="title">information</span>.</span></span><br><span class="line"><span class="function">&gt;&gt;&gt;    #可以开始运行一些<span class="title">python</span>命令了</span></span><br></pre></td></tr></table></figure> 当然你也可以直接运行python解释器，它的界面和cmd差不多，但是会具有更多功能。</p>
+<p>开始学习python了！！！</p>
 <h2 id="变量variable">变量(variable)</h2>
 <h3 id="关于变量">关于变量</h3>
 <p>变量的命名需要满足以下规则</p>
@@ -947,6 +949,26 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <li>测试引发错误时打印一个E;</li>
 <li>测试导致断言失败时则打印一个F。</li>
 </ul>
+<h2 id="查看模块的文档和帮助信息">查看模块的文档和帮助信息</h2>
+<p>当使用一个模块时,我们希望了解模块的帮助文档以便我们使用模块中的内容.</p>
+<ul>
+<li>函数help()</li>
+</ul>
+<p>如需要查看json模块的信息: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="built_in">help</span>(json)</span><br></pre></td></tr></table></figure> 模块最好是先导入,再查看,防止出现问题,下面同样如此。<br>
+参数为某个第三方模块名时,将查看该第三方模块的官方文档。</p>
+<ul>
+<li>查询函数信息</li>
+</ul>
+<p>查看模块中的所有函数信息: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> module_name</span><br><span class="line"><span class="built_in">dir</span>(module_name)</span><br></pre></td></tr></table></figure> 查看模块中某个函数的信息: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> module_name</span><br><span class="line"><span class="built_in">help</span>(module_name.func_name)</span><br></pre></td></tr></table></figure> 如果是查看某个包中的方法 的文档,可以类似上面的语句进行查看. <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> bag_name</span><br><span class="line"><span class="built_in">help</span>(bag_name.func_name)</span><br></pre></td></tr></table></figure> (句点表示法太有用了!!!)</p>
+<ul>
+<li>python第三方库的文档列表</li>
+</ul>
+<p>我们可以利用python创建一个网页,它将根据你的安装目录显示所有已安装的第三方库,我们可以利用某个未使用的网络端口进行查看:这里采用4000端口,这项操作同样可在命令提示符(cmd)中进行: <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">admin</span>&gt;<span class="title">D</span>:</span></span><br><span class="line"><span class="function"><span class="title">D</span>:\<span class="title">python</span> -<span class="title">m</span> <span class="title">pydoc</span> -<span class="title">p</span> 4000</span></span><br></pre></td></tr></table></figure> 运行结果: <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">Server ready <span class="built_in">at</span> http://localhost:<span class="number">4000</span>/</span><br><span class="line">Server commands: [b]rowser, [q]uit</span><br><span class="line">server&gt; </span><br></pre></td></tr></table></figure> 现在你可以打开4000端口并查看文档列表了,按<code>q+Enter</code>退出。</p>
+<ul>
+<li>Python documentation (python官方文档)</li>
+</ul>
+<p>登录python官网，点击最上方栏中的<code>Docs</code>来查看它吧。</p>
+<p>在需要时去查看这些文档和帮助吧，可能能解决不少问题。</p>
 <h1 id="尾言">尾言</h1>
 <p>至此,python的基础知识就全部介绍完了。关于python的项目,有生之年吧(〟-_・)ﾝ<br>
 还是要再次推荐这本教材(Python编程:从入门到实践（第二版）（美）埃里克·马瑟斯[著]),语言容易理解,有大量的实例可以思考。<br>
