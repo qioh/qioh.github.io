@@ -371,7 +371,7 @@ For the question,a basis for C is <span class="math inline"><mjx-container class
 <h3 id="if语句的pep-8建议">if语句的PEP 8建议</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> a &lt; b: <span class="comment">#比较运算符两边各加一个空格</span></span><br></pre></td></tr></table></figure>
 <p>要比 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> a&lt;b:</span><br></pre></td></tr></table></figure> 更好。</p>
-<h1 id="字典-用户输入与while循环-函数">字典 用户输入与while循环 函数</h1>
+<h1 id="字典-用户输入与while循环">字典 用户输入与while循环</h1>
 <h2 id="字典">字典</h2>
 <h3 id="字典的创建">字典的创建</h3>
 <p>用花括号<code>{}</code>和键值对来创建字典: <figure class="highlight python"><figcaption><span>创建字典</span></figcaption><table><tr><td class="code"><pre><span class="line">alien = {<span class="string">'color'</span>:<span class="string">'red'</span>,<span class="string">'points'</span>:<span class="number">5</span>}</span><br><span class="line">empty = {} <span class="comment">#创建空字典</span></span><br></pre></td></tr></table></figure> 访问字典中与键相关联的值,用<code>[]</code>内放入键的方式来完成: <figure class="highlight python"><figcaption><span>用键来访问关联值</span></figcaption><table><tr><td class="code"><pre><span class="line">alien_color = alien[<span class="string">'color'</span>]</span><br></pre></td></tr></table></figure> 添加键值对,类似访问的方法进行创建 <figure class="highlight python"><figcaption><span>添加键值对</span></figcaption><table><tr><td class="code"><pre><span class="line">alien[<span class="string">'x_position'</span>] = <span class="number">0</span></span><br><span class="line">alien[<span class="string">'y_position'</span>] = <span class="number">1</span></span><br></pre></td></tr></table></figure> 字典将按照顺序,在字典末尾依次添加键值对。 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(alien)</span><br><span class="line">{<span class="string">'color'</span>:<span class="string">'red'</span>,<span class="string">'points'</span>:<span class="number">5</span>,<span class="string">'x_position'</span>:<span class="number">0</span>,<span class="string">'y_position'</span>:<span class="number">1</span> }</span><br></pre></td></tr></table></figure> 我们还可以随时修改键对应的值: <figure class="highlight python"><figcaption><span>修改键对值</span></figcaption><table><tr><td class="code"><pre><span class="line">alien[<span class="string">'color'</span>] = <span class="string">'green'</span></span><br></pre></td></tr></table></figure> 以及删除键值对: <figure class="highlight python"><figcaption><span>删除键值对(无法再次访问)</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">del</span> alien[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure> 最后,如果一个字典由类似的对象组成,我们可以采用这种格式来提高代码的可阅读性: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">favorite_languages = {</span><br><span class="line">	<span class="string">'jen'</span>:<span class="string">'python'</span>,</span><br><span class="line">	<span class="string">'sarah'</span>:<span class="string">'C'</span>,</span><br><span class="line">	<span class="string">'phil'</span>:<span class="string">'python'</span>,</span><br><span class="line">	}</span><br></pre></td></tr></table></figure></p>
@@ -477,12 +477,12 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <li>让用户填充列表和字典</li>
 </ul>
 <p>我们可以定义一个空列表或空字典,通过while循环来让用户输入,并设置退出条件结束输入。 <figure class="highlight python"><figcaption><span>列表的用户输入</span></figcaption><table><tr><td class="code"><pre><span class="line">listings = [] <span class="comment">#建立空列表</span></span><br><span class="line">prompt = <span class="string">'please input,'</span></span><br><span class="line">prompt += <span class="string">'enter "quit" to end it: '</span> <span class="comment">#设置提示输入语句</span></span><br><span class="line">flag = <span class="literal">True</span>  <span class="comment">#设置标志</span></span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">	message = <span class="built_in">input</span>(prompt)</span><br><span class="line">	<span class="keyword">if</span> message != <span class="string">'quit'</span>:</span><br><span class="line">		listings.append(message)    <span class="comment">#为列表添加元素</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		flag = <span class="literal">False</span>                <span class="comment">#设置结束循环的条件</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(listings)</span><br></pre></td></tr></table></figure> <figure class="highlight python"><figcaption><span>字典的用户输入</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">dict</span> = {}  <span class="comment">#建立空字典</span></span><br><span class="line">flag = <span class="literal">True</span>  <span class="comment">#设置标志</span></span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">	key = <span class="built_in">input</span>(<span class="string">'input key: '</span>)</span><br><span class="line">	value = <span class="built_in">input</span>(<span class="string">'input value for key: '</span>)  <span class="comment">#依次输入键值对</span></span><br><span class="line">	<span class="built_in">dict</span>[key] = value                       <span class="comment">#将键值对存储进字典中</span></span><br><span class="line">	repeat =<span class="built_in">input</span>(<span class="string">'Would you like to continue？(yes/no): '</span>)  <span class="comment">#询问用户继续或者退出</span></span><br><span class="line">	<span class="keyword">if</span> repeat == <span class="string">'no'</span>:</span><br><span class="line">		flag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dict</span>)</span><br></pre></td></tr></table></figure></p>
-<h2 id="函数与模块">函数与模块</h2>
+<h1 id="函数与模块">函数与模块</h1>
 <blockquote>
 <p>函数是带名字的代码块,用于完成具体的工作。</p>
 </blockquote>
-<h3 id="函数">函数</h3>
-<h4 id="定义函数">定义函数</h4>
+<h2 id="函数">函数</h2>
+<h3 id="定义函数">定义函数</h3>
 <ul>
 <li>简单的函数定义</li>
 </ul>
@@ -501,8 +501,8 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <li>使用任意数量的关键字实参</li>
 </ul>
 <p>可以使函数编写成能够接受任意数量的键值对: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function_name</span>(<span class="params">**dict_name</span>)</span></span><br></pre></td></tr></table></figure> <code>**dict_name</code>将创建一个字典,可以容纳任意数量的键值对,将按照实参的输入顺序依次添加进字典中。 实参输入时,形式如下,它和字典的常用表达形式有点不同: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">function_name(key1=value1,key2=value2,...) </span><br><span class="line"><span class="comment">#key为变量,将被存储成键,不需要加引号</span></span><br><span class="line"><span class="comment">#value为值,将被存储成值,必要时需要加引号</span></span><br></pre></td></tr></table></figure> 这种实参将收集任意数量的关键字实参。</p>
-<h4 id="传递实参">传递实参</h4>
-<h5 id="函数读取实参的过程">函数读取实参的过程</h5>
+<h3 id="传递实参">传递实参</h3>
+<h4 id="函数读取实参的过程">函数读取实参的过程</h4>
 <ul>
 <li>位置实参</li>
 </ul>
@@ -531,12 +531,12 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <p>普通形参、有默认值的形参、形成元组或字典的形参(<code>*</code>和<code>**</code>)</p>
 </blockquote>
 <p>至此,函数的头部定义常用的方法已经全部介绍了,使用自己最容易理解的方式去定义函数的头部即可。</p>
-<h5 id="函数的返回值">函数的返回值</h5>
+<h4 id="函数的返回值">函数的返回值</h4>
 <p>函数可以返回任意类型的值。 在函数的结尾处,用以下语句去返回在函数体中存在的变量吧: <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> value</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>即使没有定义返回值,函数会默认返回值<code>None</code></p>
 </blockquote>
-<h3 id="将函数存储在模块中">将函数存储在模块中</h3>
+<h2 id="将函数存储在模块中">将函数存储在模块中</h2>
 <p>使用函数的优点之一是可将代码块与主程序分离。可以将函数存储在称为<strong>模块</strong>的独立文件中,再将模块导入到主程序中。</p>
 <blockquote>
 <p>模块:扩展名为.py的文件,包含要导入到程序中的代码。</p>
@@ -558,7 +558,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <p>要么只导入需要使用的函数,要么导入整个模块并使用句点表示法。</p>
 </blockquote>
 <p>这让代码更清晰,更容易阅读和理解。</p>
-<h3 id="函数编写指南">函数编写指南</h3>
+<h2 id="函数编写指南">函数编写指南</h2>
 <p>这里列举几个教材上的编写指南:</p>
 <ul>
 <li>应给函数指定描述性名称,且只在其中使用小写字母和下划线。给模块命名时也应遵循上述约定</li>
