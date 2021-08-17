@@ -174,6 +174,7 @@
 </ul>
 </blockquote>
 <p>总而言之,让你的代码尽量简单,易读(利用<code>#</code>来进行注释吧)。</p>
+<hr>
 <h1 id="列表">列表</h1>
 <h2 id="创建列表">创建列表</h2>
 <p>列表用<code>[]</code>进行创建,利用索引访问列表元素(索引从0开始)。不妨将列表名写成复数形式来提醒自己。 <figure class="highlight python"><figcaption><span>列表的创建和访问列表元素</span></figcaption><table><tr><td class="code"><pre><span class="line">alpybets = [<span class="string">'d'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'a'</span>] <span class="comment">#创建列表</span></span><br><span class="line"><span class="built_in">print</span>(alpybets)    <span class="comment">#打印列表</span></span><br><span class="line"><span class="built_in">print</span>(alpybets[<span class="number">0</span>]) <span class="comment">#利用索引访问列表元素,索引从0开始</span></span><br></pre></td></tr></table></figure> 索引可以为负数。-1代表列表最后一个元素,-2代表倒数第二个元素,依此类推。</p>
@@ -281,6 +282,7 @@
 <li>合理使用空行,即使空行不会影响代码的运行</li>
 </ul>
 </blockquote>
+<hr>
 <h1 id="if语句">if语句</h1>
 <h2 id="条件测试">条件测试</h2>
 <blockquote>
@@ -316,6 +318,7 @@
 <h3 id="if语句的pep-8建议">if语句的PEP 8建议</h3>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> a &lt; b: <span class="comment">#比较运算符两边各加一个空格</span></span><br></pre></td></tr></table></figure>
 <p>要比 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> a&lt;b:</span><br></pre></td></tr></table></figure> 更好。</p>
+<hr>
 <h1 id="字典-用户输入与while循环">字典 用户输入与while循环</h1>
 <h2 id="字典">字典</h2>
 <h3 id="字典的创建">字典的创建</h3>
@@ -422,6 +425,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <li>让用户填充列表和字典</li>
 </ul>
 <p>我们可以定义一个空列表或空字典,通过while循环来让用户输入,并设置退出条件结束输入。 <figure class="highlight python"><figcaption><span>列表的用户输入</span></figcaption><table><tr><td class="code"><pre><span class="line">listings = [] <span class="comment">#建立空列表</span></span><br><span class="line">prompt = <span class="string">'please input,'</span></span><br><span class="line">prompt += <span class="string">'enter "quit" to end it: '</span> <span class="comment">#设置提示输入语句</span></span><br><span class="line">flag = <span class="literal">True</span>  <span class="comment">#设置标志</span></span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">	message = <span class="built_in">input</span>(prompt)</span><br><span class="line">	<span class="keyword">if</span> message != <span class="string">'quit'</span>:</span><br><span class="line">		listings.append(message)    <span class="comment">#为列表添加元素</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		flag = <span class="literal">False</span>                <span class="comment">#设置结束循环的条件</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(listings)</span><br></pre></td></tr></table></figure> <figure class="highlight python"><figcaption><span>字典的用户输入</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">dict</span> = {}  <span class="comment">#建立空字典</span></span><br><span class="line">flag = <span class="literal">True</span>  <span class="comment">#设置标志</span></span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">	key = <span class="built_in">input</span>(<span class="string">'input key: '</span>)</span><br><span class="line">	value = <span class="built_in">input</span>(<span class="string">'input value for key: '</span>)  <span class="comment">#依次输入键值对</span></span><br><span class="line">	<span class="built_in">dict</span>[key] = value                       <span class="comment">#将键值对存储进字典中</span></span><br><span class="line">	repeat =<span class="built_in">input</span>(<span class="string">'Would you like to continue？(yes/no): '</span>)  <span class="comment">#询问用户继续或者退出</span></span><br><span class="line">	<span class="keyword">if</span> repeat == <span class="string">'no'</span>:</span><br><span class="line">		flag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dict</span>)</span><br></pre></td></tr></table></figure></p>
+<hr>
 <h1 id="函数与模块">函数与模块</h1>
 <blockquote>
 <p>函数是带名字的代码块,用于完成具体的工作。</p>
@@ -515,8 +519,9 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 </ul>
 <figure class="highlight python"><figcaption><span>(/)的举例</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function_name</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">			parameter_0, parameter_1, parameter_2,</span></span></span><br><span class="line"><span class="params"><span class="function">			parameter_3, parameter_4, parameter_5</span>):</span></span><br><span class="line">function body...</span><br></pre></td></tr></table></figure>
 <p>编写函数具有众多的优点,也让一个问题的解决步骤化,模块化,更加清晰。程序修改、测试与维护也因函数的使用变得方便,清晰明了。</p>
+<hr>
 <h1 id="类">类</h1>
-<p>这应该是最复杂的数据结构了。。。让我们开始吧。<br>
+<p>这应该是比较复杂的数据结构了。。。让我们开始吧。<br>
 面向对象编程中,我们将编写<strong>类</strong>来创建对象。</p>
 <blockquote>
 <p>根据类来创建对象称为实例化</p>
@@ -623,6 +628,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <h2 id="自定义工作流程">自定义工作流程</h2>
 <p>先写模块,再写主程序,还是反过来的代码组织方式都将由你决定。选择你最喜欢的方式,也请熟悉python中的选项,这样你才能确定哪种项目组织方式是最佳的,并能理解别人开发的项目。在最后,请回顾你写的代码,并做出改进。</p>
 <p>至此,python基础知识中的数据类型和数据结构就已经全部展示了。下面是python对于文件与测试的相关阐述。</p>
+<hr>
 <h1 id="文件-异常-测试">文件 异常 测试</h1>
 <h2 id="文件">文件</h2>
 <h3 id="文件路径的使用">文件路径的使用</h3>
@@ -894,6 +900,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <li>测试引发错误时打印一个E,并停止余下测试,返回一条Traceback;</li>
 <li>测试导致断言失败时则打印一个F,并指出断言失败的测试名,返回一条Traceback。</li>
 </ul>
+<hr>
 <h1 id="查看模块的文档和帮助信息">查看模块的文档和帮助信息</h1>
 <p>当使用一个模块时,我们希望了解模块的帮助文档以便我们使用模块中的内容.</p>
 <ul>
@@ -914,6 +921,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 </ul>
 <p>登录python官网，点击最上方栏中的<code>Docs</code>来查看它吧。</p>
 <p>在需要时去查看这些文档和帮助吧,也许能解决不少问题。</p>
+<hr>
 <h1 id="尾言">尾言</h1>
 <p>至此,python的基础知识就全部介绍完了。关于python的项目,有生之年吧(〟-_・)ﾝ<br>
 还是要再次推荐这本教材(Python编程:从入门到实践（第二版）（美）埃里克·马瑟斯[著]),语言容易理解,有大量的实例可以思考。<br>
