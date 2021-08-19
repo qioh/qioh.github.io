@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Basic algebra knowledge for coding theorem</title>
-    <url>/2021/08/19/basic-algebra-knowledge-for-coding-theorem/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="188ee5aff39ff028bd5b85db9552f4d9f429ae93b578a229329b1c42530becc5">e5bcef13801e9cbce199ebe68d5a20732f5b22c86b3ff0d2d2863e7a678d080651873679c496524e1e93bb39dfe03f3a8bd02159ebfde7c2ee25bde147ca1f7872d52021532f1e0a5916252719041245b9b100b801b13fba8706763c6b5df6341475fc918427147eefff20d6aa86acb623ba1a04f3fc9e56f3857ff3ad574674a0cf5dfba3a371368c85572e8aae4f170134e893cebe6206c6c95d8ba843da22458314350ee4e768432c0d4e206b7e7a5ade52b234231cf95b76ccd47e51106cf7e0a692f9a412984b84fdecd962056cc423e380880bcd39f54d270c00ad2981760452eb1b7313ca4d5e2bfd082cfa63b14b0c836d9d160062b4b8775edccbc822372431baf074efb0e12c187a806ade619e97fb57cb888445b07d9689e1d777a7db08484e715a8dddba3681dc3e03fe65c6dcae99b38070b0756f1e50fee963f61056ba17670e54f719a557a2954b3f0406560af6f8f91e1d04cf444f30bb91178582adfedd9a9ce0cdc16b5331ffd6c2250b9a3e2078e6bfba52913fe4d1edb9c5feea780ba5f7133fc9e08318a0af485db7fdb11e96ffa8807ce061831fc8b14ce3c8441b11aa7846a45d4f399201997c986517abe94fe8f23b7cf15f72b232c10886235a4936b2d594235f70ad6e</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码哦，点击输入吧 (◦˙▽˙◦)</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>finite fields</tag>
-        <tag>linear algebaric</tag>
-        <tag>channel coding</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Coding theory foundation</title>
     <url>/2021/08/05/coding-theory-foundation/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -39,6 +18,27 @@
       <tags>
         <tag>channel coding</tag>
         <tag>algebraic coding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Basic algebra knowledge for coding theorem</title>
+    <url>/2021/08/19/basic-algebra-knowledge-for-coding-theorem/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e58dc0a1fa347a4a8c1327151eb8e187a1540ed1605bb668b1ffa24b0e9633b4">e5bcef13801e9cbce199ebe68d5a20732f5b22c86b3ff0d2d2863e7a678d080651873679c496524e1e93bb39dfe03f3a8bd02159ebfde7c2ee25bde147ca1f7872d52021532f1e0a59162527190412456826fac9e7562a8bf69a9d4c71bfff32ce8e39cbdf0d277bde8a4718f4dcd23e4cecb7f30f3c3ac626c17f728252fd67e2f6408309119b717874d468ae204eeaeff83ebae8640f653d3cc4b097aefe7afeab7e561711d112484bb867ac835f1f1152b64c2ab51bf0f9f6619ac4dcb5712a97e94b52503a8594100220cc9eec3de805156fed7f5c0ccf8aed985b659a07bf89e7ce6ce5481df05d12cc7cc4f2d5ad92b1efd9e34d95754de31178160669a2c99de3d9a10b012b6228c2235811d35e349269023a9cb11ecd66d2d6ef06eb3b78714ca9d4aac8a932cfa2b4f0fb6f737a89c86c1aa06545e85b576e6277af46b7b205e9c13595470912715f88d7cab4bf48c1f054a32be35641d3f8f444f6907deebcda2ea29d7fa9e702df3923f3e1226aa5a649b4a7171aa8ed3033bd840ad1b1b5b88afd8101f4cc8ed240f5b41c41bea0ca7913cfc9687d81065273ee904c49220681ee9f6c672115dd26f81e246382f0141e25a422911f6d668e333e57d4258be1c9bba717760c0d9ba8797ece9a9a5a5d3eac9fc2dff58bd07e3dc9</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码哦，点击输入吧 (◦˙▽˙◦)</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>channel coding</tag>
+        <tag>finite fields</tag>
+        <tag>linear algebaric</tag>
       </tags>
   </entry>
   <entry>
