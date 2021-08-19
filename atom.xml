@@ -31,11 +31,11 @@
     
     
     
-    <category term="channel coding" scheme="https://qioh.github.io/tags/channel-coding/"/>
-    
     <category term="finite fields" scheme="https://qioh.github.io/tags/finite-fields/"/>
     
     <category term="linear algebaric" scheme="https://qioh.github.io/tags/linear-algebaric/"/>
+    
+    <category term="channel coding" scheme="https://qioh.github.io/tags/channel-coding/"/>
     
   </entry>
   
