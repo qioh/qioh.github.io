@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>something about hexo next</title>
-    <url>/2021/08/01/something-about-hexo-next/</url>
+    <title>Something about markdown</title>
+    <url>/2021/08/01/something-about-markdown/</url>
     <content><![CDATA[<p>Two useful websites: 1. <a href="https://blog.csdn.net/zhuzhuyule/article/details/58347687">Writing an article</a> 2. <a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502?utm_term=next%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81%E6%A1%86&amp;utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-3-86661502&amp;spm=3001.4430">The advanced settings of theme "Next"</a></p>
-<p>I will use <strong><em>language of Markdown</em></strong>.(maybe I need to learn html grammar (╯▽╰)) <span id="more"></span></p>
+<p>I will use <strong>language of Markdown</strong>.(maybe I need to learn html grammar (╯▽╰)) <span id="more"></span></p>
 <h1 id="about-font">about font</h1>
 <h2 id="about-title">about title</h2>
 <p>use '#' to create title,and use one more '#' to create subtitles.</p>
@@ -93,7 +93,28 @@
 <p>That is all! And don't forget "space"! And it will keep updating!</p>
 ]]></content>
       <tags>
-        <tag>-hexo -next</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Basic algebra knowledge for coding theorem</title>
+    <url>/2021/08/19/basic-algebra-knowledge-for-coding-theorem/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="188ee5aff39ff028bd5b85db9552f4d9f429ae93b578a229329b1c42530becc5">e5bcef13801e9cbce199ebe68d5a20732f5b22c86b3ff0d2d2863e7a678d080651873679c496524e1e93bb39dfe03f3a8bd02159ebfde7c2ee25bde147ca1f7872d52021532f1e0a5916252719041245b9b100b801b13fba8706763c6b5df6341475fc918427147eefff20d6aa86acb623ba1a04f3fc9e56f3857ff3ad574674a0cf5dfba3a371368c85572e8aae4f170134e893cebe6206c6c95d8ba843da22458314350ee4e768432c0d4e206b7e7a5ade52b234231cf95b76ccd47e51106cf7e0a692f9a412984b84fdecd962056cc423e380880bcd39f54d270c00ad2981760452eb1b7313ca4d5e2bfd082cfa63b14b0c836d9d160062b4b8775edccbc822372431baf074efb0e12c187a806ade619e97fb57cb888445b07d9689e1d777a7db08484e715a8dddba3681dc3e03fe65c6dcae99b38070b0756f1e50fee963f61056ba17670e54f719a557a2954b3f0406560af6f8f91e1d04cf444f30bb91178582adfedd9a9ce0cdc16b5331ffd6c2250b9a3e2078e6bfba52913fe4d1edb9c5feea780ba5f7133fc9e08318a0af485db7fdb11e96ffa8807ce061831fc8b14ce3c8441b11aa7846a45d4f399201997c986517abe94fe8f23b7cf15f72b232c10886235a4936b2d594235f70ad6e</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码哦，点击输入吧 (◦˙▽˙◦)</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>finite fields</tag>
+        <tag>linear algebaric</tag>
+        <tag>channel coding</tag>
       </tags>
   </entry>
   <entry>
@@ -112,13 +133,13 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
-        <tag>Channel coding</tag>
-        <tag>Algebraic coding</tag>
+        <tag>channel coding</tag>
+        <tag>algebraic coding</tag>
       </tags>
   </entry>
   <entry>
-    <title>python基础</title>
-    <url>/2021/08/05/python_learning/</url>
+    <title>Python基础</title>
+    <url>/2021/08/05/python-learning/</url>
     <content><![CDATA[<p>这是我学习python的历程,你将见证一个拖延症晚期的人最后的自律。<br>
 <span id="more"></span> 选用教材: 《Python编程:从入门到实践(第二版)》 (美)埃里克·马瑟斯[著] 袁国忠[译] 人民邮电出版社</p>
 <h1 id="初识python-变量">初识python 变量</h1>
@@ -928,7 +949,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 The end~</p>
 ]]></content>
       <tags>
-        <tag>-python -notes</tag>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>
