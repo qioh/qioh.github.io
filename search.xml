@@ -55,7 +55,7 @@
 <p>同时,在数中任意位置添加_不会影响它参与后面的使用.这样可以给数字分组,使数清晰易读。 <figure class="highlight python"><figcaption><span>_的使用</span></figcaption><table><tr><td class="code"><pre><span class="line">age = <span class="number">10_000_000</span></span><br></pre></td></tr></table></figure> _ 的位置是任意的,1000、1_000、10_00、100_0在操作中它们的值都会视为1000。</p>
 <h3 id="多变量赋值-常量">多变量赋值 常量</h3>
 <p>简单的多变量赋值如下: <figure class="highlight python"><figcaption><span>多变量赋值</span></figcaption><table><tr><td class="code"><pre><span class="line">x,y,z = <span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span> <span class="comment">#将依次赋值,x=0,y=1,z=2</span></span><br></pre></td></tr></table></figure> 关于常量,指在一个程序中永恒不变的量。python没有内置的常量类型,但我们可以将变量名字母全部大写用于标注,将其视为常量,提醒程序员在后续的操作中不得出现改变其值的命令。 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">CONSTANT = <span class="number">5000</span></span><br></pre></td></tr></table></figure></p>
-<p>##python之禅（好高大上的名字,由Tim Peters撰写）</p>
+<h2 id="python之禅好高大上的名字由tim-peters撰写">python之禅（好高大上的名字,由Tim Peters撰写）</h2>
 <p>是在书写优秀python代码时普遍尊重的指导原则,在解释器中运行<code>import this</code>来获得这些原则。 列举一些教材中举例的<strong>python之禅</strong></p>
 <blockquote>
 <ul>
