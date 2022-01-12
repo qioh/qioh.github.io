@@ -23,7 +23,7 @@
 <ul>
 <li>pic 1</li>
 </ul>
-<p><img title="" src="file:///C:/Users/admin/Desktop/picture/picture for net matrix/1.png" alt="" width="197" data-align="inline"></p>
+<p><img src="C:\Users\admin\Desktop\picture\picture%20for%20net%20matrix\1.png"></p>
 <p>常用的几种图：无向图，有向图，赋权图，有时允许自己与自己相连的图</p>
 <p>上面的图就是一张无向图；也可以为链接指定方向，成为有向图（有向网络）；可以为链接赋予一个数（权重），变成赋权图（加权网络）；可以允许点与自己构成链接【这种情况不常考虑】。</p>
 <h2 id="网络的参数与性质">网络的参数与性质</h2>
