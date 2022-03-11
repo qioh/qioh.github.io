@@ -23,7 +23,7 @@
 <meta property="og:description" content="这是我学习python的历程,你将见证一个拖延症晚期的人最后的自律。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-11T13:50:48.037Z">
+<meta property="article:modified_time" content="2022-03-11T13:54:41.146Z">
 <meta property="article:author" content="祈qioh">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -45,6 +45,7 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="alternate" href="/atom.xml" title="qioh的随记" type="application/atom+xml">
 <style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -157,8 +158,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style><link rel="alternate" href="/atom.xml" title="qioh的随记" type="application/atom+xml">
-</head>
+</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="headband"></div>
@@ -346,7 +346,7 @@ mjx-container[display="true"] + br {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-03-11 21:50:48" itemprop="dateModified" datetime="2022-03-11T21:50:48+08:00">2022-03-11</time>
+        <time title="修改时间：2022-03-11 21:54:41" itemprop="dateModified" datetime="2022-03-11T21:54:41+08:00">2022-03-11</time>
       </span>
 
   
@@ -1205,7 +1205,7 @@ float()将返回浮点数,无论参数是整数还是小数,整数则会转化�
 <p>它删掉了文本原来的内容！<br>
 所以要注意区分写入模式(Write mode)和附加模式(Additional mode)的区别,在需要的时候正确的选择和使用它们。</p>
 <h3 id="csv文件">Csv文件</h3>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">'exer.csv'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> exer:</span><br><span class="line">    reader = csv.reader(exer)</span><br><span class="line">    column = [row[<span class="number">0</span>] <span class="keyword">for</span> row <span class="keyword">in</span> reader]</span><br><span class="line">    column.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(column)</span><br><span class="line"></span><br><span class="line">lists1= [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br><span class="line">lists2=[<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>]</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">'exer1.csv'</span>,<span class="string">'w'</span>,newline=<span class="string">''</span>) <span class="keyword">as</span> exer1:</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> csv </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">'exer.csv'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> exer:</span><br><span class="line">    reader = csv.reader(exer)</span><br><span class="line">    column = [row[<span class="number">0</span>] <span class="keyword">for</span> row <span class="keyword">in</span> reader]</span><br><span class="line">    column.pop(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(column)</span><br><span class="line"></span><br><span class="line">lists1= [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br><span class="line">lists2=[<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>]</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">'exer1.csv'</span>,<span class="string">'w'</span>,newline=<span class="string">''</span>) <span class="keyword">as</span> exer1:</span><br><span class="line">    write = csv.writer(exer1)</span><br><span class="line">    write.writerows(<span class="built_in">zip</span>(lists1,lists2))</span><br></pre></td></tr></table></figure>
 <h3 id="模块json和json文件.json">模块json和json文件(.json)</h3>
 <blockquote>
 <p>模块json能让你将简单的python数据结构转储到文件中,并在程序再次运行时加载该文件中的数据。</p>
