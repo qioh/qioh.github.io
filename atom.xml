@@ -6,7 +6,7 @@
   <link href="https://qioh.github.io/atom.xml" rel="self"/>
   
   <link href="https://qioh.github.io/"/>
-  <updated>2022-03-12T03:10:01.252Z</updated>
+  <updated>2022-03-12T03:19:18.026Z</updated>
   <id>https://qioh.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://qioh.github.io/2022/03/12/Numerical-Analysis%20/"/>
     <id>https://qioh.github.io/2022/03/12/Numerical-Analysis%20/</id>
     <published>2022-03-11T16:00:00.000Z</published>
-    <updated>2022-03-12T03:10:01.252Z</updated>
+    <updated>2022-03-12T03:19:18.026Z</updated>
     
-    <content type="html"><![CDATA[<p>这次试点新玩意，每个问题的数值方法我会写入一个pdf中供查阅，不定期更新。</p><span id="more"></span><p>pdf里只有原理公式</p><ol type="1"><li>初值问题的数值ODE方法: pdf_file/myode.pdf</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>这次试点新玩意，每个问题的数值方法我会写入一个pdf中供查阅，不定期更新。</p><span id="more"></span><p>pdf里只有原理公式</p><ol type="1"><li>初值问题的数值ODE方法: <a href="qioh.github.io/pdf_file/myode.pdf">myode</a></li></ol>]]></content>
     
     
     <summary type="html">&lt;p&gt;这次试点新玩意，每个问题的数值方法我会写入一个pdf中供查阅，不定期更新。&lt;/p&gt;</summary>
