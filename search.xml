@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一个简单的XeLatex作业模板</title>
+    <url>/2021/12/08/XeLatex-article-example/</url>
+    <content><![CDATA[<p>这是一个简单的Xelatex作业模板。</p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\documentclass[12]{article}</span><br><span class="line">\usepackage{amsthm,amsmath,amssymb}</span><br><span class="line">\usepackage{mathrsfs}</span><br><span class="line">\renewcommand{\abstractname}{}</span><br><span class="line">\usepackage{diagbox}</span><br><span class="line">\usepackage{listings}</span><br><span class="line">\usepackage{xcolor}</span><br><span class="line">\usepackage{ctex}</span><br><span class="line">\usepackage{graphicx} %插入图片</span><br><span class="line">\usepackage{pdfpages} %\includepdf{} %插入pdf</span><br><span class="line">\usepackage{geometry}</span><br><span class="line">\usepackage{fancyhdr}</span><br><span class="line">\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}</span><br><span class="line">\linespread{1.25}</span><br><span class="line">\pagestyle{fancy}</span><br><span class="line">\fancyhf{} </span><br><span class="line">\fancyhead[L]{2022/3/4 实验一} %页眉左</span><br><span class="line">\fancyhead[R]{Page \thepage} %页眉右</span><br><span class="line">\usepackage{setspace}</span><br><span class="line">\usepackage{cases}</span><br><span class="line">\usepackage{multirow}</span><br><span class="line">\setstretch{1.523}</span><br><span class="line">\lstset{</span><br><span class="line">numbers = left, </span><br><span class="line">numberstyle = \tiny,</span><br><span class="line">language = Matlab,</span><br><span class="line">frame=tb,</span><br><span class="line">commentstyle=\it\color[RGB]{66,150,66},</span><br><span class="line">} %插入代码的格式</span><br><span class="line">\usepackage{appendix} %插入附录</span><br><span class="line"></span><br><span class="line">\begin{document}</span><br><span class="line">%\emph{} 斜体</span><br><span class="line">%\footnote{}：脚注</span><br><span class="line">%\begin{tabular}：表格</span><br><span class="line">%\diagbox[dir=NW]{A}{B}</span><br><span class="line">%\multirow{n}{*}{A}</span><br><span class="line">%\multicolumn{n}{|c|}{B}</span><br><span class="line">%\hline</span><br><span class="line"></span><br><span class="line">%标题与作者</span><br><span class="line">            \leftline{\LARGE\songti\textbf{标题}}</span><br><span class="line"></span><br><span class="line">            \leftline{\large\kaishu\textbf{***\quad ***}</span><br><span class="line"></span><br><span class="line">%摘要</span><br><span class="line">    \begin{abstract} </span><br><span class="line">        \textbf{Abstract:}</span><br><span class="line">        \textbf{Keywords:}</span><br><span class="line">    \end{abstract}</span><br><span class="line"></span><br><span class="line">%正文</span><br><span class="line">    \section{}</span><br><span class="line">    \subsection{}</span><br><span class="line"></span><br><span class="line">%References</span><br><span class="line">    \begin{thebibliography}{99}  </span><br><span class="line">    \bibitem{ref1}</span><br><span class="line">    \bibitem{ref2}</span><br><span class="line">    \end{thebibliography}</span><br><span class="line"></span><br><span class="line">%附录</span><br><span class="line">    \appendix</span><br><span class="line">    \section{附录}</span><br><span class="line"></span><br><span class="line">\end{document}</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Latex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数值方法</title>
     <url>/2022/03/12/Numerical-Analysis%20/</url>
     <content><![CDATA[<p>这次试点新玩意，每个问题的数值方法我会写入一个pdf中供查阅，不定期更新。</p>
 <span id="more"></span>
 <p>pdf里只有原理公式</p>
 <ol type="1">
-<li>初值问题的数值ODE方法: <a href="qioh.github.io/pdf_file/myode.pdf">myode</a></li>
+<li>初值问题的数值ODE方法: <div class="pdf-container" data-target="pdf_file/myode.pdf" data-height="500px"></div></li>
 </ol>
 ]]></content>
       <tags>
@@ -128,17 +139,6 @@
 ]]></content>
       <tags>
         <tag>matrix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个简单的XeLatex作业模板</title>
-    <url>/2021/12/08/XeLatex-article-example/</url>
-    <content><![CDATA[<p>这是一个简单的Xelatex作业模板。</p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\documentclass[12]{article}</span><br><span class="line">\usepackage{amsthm,amsmath,amssymb}</span><br><span class="line">\usepackage{mathrsfs}</span><br><span class="line">\renewcommand{\abstractname}{}</span><br><span class="line">\usepackage{diagbox}</span><br><span class="line">\usepackage{listings}</span><br><span class="line">\usepackage{xcolor}</span><br><span class="line">\usepackage{ctex}</span><br><span class="line">\usepackage{graphicx} %插入图片</span><br><span class="line">\usepackage{pdfpages} %\includepdf{} %插入pdf</span><br><span class="line">\usepackage{geometry}</span><br><span class="line">\usepackage{fancyhdr}</span><br><span class="line">\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}</span><br><span class="line">\linespread{1.25}</span><br><span class="line">\pagestyle{fancy}</span><br><span class="line">\fancyhf{} </span><br><span class="line">\fancyhead[L]{2022/3/4 实验一} %页眉左</span><br><span class="line">\fancyhead[R]{Page \thepage} %页眉右</span><br><span class="line">\usepackage{setspace}</span><br><span class="line">\usepackage{cases}</span><br><span class="line">\usepackage{multirow}</span><br><span class="line">\setstretch{1.523}</span><br><span class="line">\lstset{</span><br><span class="line">numbers = left, </span><br><span class="line">numberstyle = \tiny,</span><br><span class="line">language = Matlab,</span><br><span class="line">frame=tb,</span><br><span class="line">commentstyle=\it\color[RGB]{66,150,66},</span><br><span class="line">} %插入代码的格式</span><br><span class="line">\usepackage{appendix} %插入附录</span><br><span class="line"></span><br><span class="line">\begin{document}</span><br><span class="line">%\emph{} 斜体</span><br><span class="line">%\footnote{}：脚注</span><br><span class="line">%\begin{tabular}：表格</span><br><span class="line">%\diagbox[dir=NW]{A}{B}</span><br><span class="line">%\multirow{n}{*}{A}</span><br><span class="line">%\multicolumn{n}{|c|}{B}</span><br><span class="line">%\hline</span><br><span class="line"></span><br><span class="line">%标题与作者</span><br><span class="line">            \leftline{\LARGE\songti\textbf{标题}}</span><br><span class="line"></span><br><span class="line">            \leftline{\large\kaishu\textbf{***\quad ***}</span><br><span class="line"></span><br><span class="line">%摘要</span><br><span class="line">    \begin{abstract} </span><br><span class="line">        \textbf{Abstract:}</span><br><span class="line">        \textbf{Keywords:}</span><br><span class="line">    \end{abstract}</span><br><span class="line"></span><br><span class="line">%正文</span><br><span class="line">    \section{}</span><br><span class="line">    \subsection{}</span><br><span class="line"></span><br><span class="line">%References</span><br><span class="line">    \begin{thebibliography}{99}  </span><br><span class="line">    \bibitem{ref1}</span><br><span class="line">    \bibitem{ref2}</span><br><span class="line">    \end{thebibliography}</span><br><span class="line"></span><br><span class="line">%附录</span><br><span class="line">    \appendix</span><br><span class="line">    \section{附录}</span><br><span class="line"></span><br><span class="line">\end{document}</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Latex</tag>
       </tags>
   </entry>
   <entry>
