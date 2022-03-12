@@ -12,6 +12,15 @@
       </tags>
   </entry>
   <entry>
+    <title>简单的数值方法</title>
+    <url>/2022/03/12/num-ana/</url>
+    <content><![CDATA[<p>（试点新玩意） <span id="more"></span> <div class="pdf-container" data-target="myode.pdf" data-height="500px"></div></p>
+]]></content>
+      <tags>
+        <tag>Numerical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>矩阵与网络</title>
     <url>/2022/01/12/net-matrix/</url>
     <content><![CDATA[<p>╮(╯▽╰)╭</p>
@@ -1225,15 +1234,6 @@ The end~</p>
 ]]></content>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简单的数值方法</title>
-    <url>/2022/03/12/num-ana/</url>
-    <content><![CDATA[<p>Hello <div class="pdf-container" data-target="myode.pdf" data-height="500px"></div></p>
-]]></content>
-      <tags>
-        <tag>Numerical Analysis</tag>
       </tags>
   </entry>
 </search>
