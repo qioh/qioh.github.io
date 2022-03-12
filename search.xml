@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>数值方法</title>
-    <url>/2022/03/12/Numerical-Analysis%20/</url>
-    <content><![CDATA[<p>这次试点新玩意，每个问题的数值方法我会写入一个pdf中供查阅，不定期更新。</p>
-<span id="more"></span>
-<p>pdf里只有原理公式</p>
-<ol type="1">
-<li>初值问题的数值ODE方法: <div class="pdf-container" data-target="./myode.pdf" data-height="500px"></div></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Numerical Analysis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个简单的XeLatex作业模板</title>
     <url>/2021/12/08/XeLatex-article-example/</url>
     <content><![CDATA[<p>这是一个简单的Xelatex作业模板。</p>
