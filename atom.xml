@@ -6,7 +6,7 @@
   <link href="https://qioh.github.io/atom.xml" rel="self"/>
   
   <link href="https://qioh.github.io/"/>
-  <updated>2022-01-13T01:52:23.976Z</updated>
+  <updated>2022-03-12T03:44:46.662Z</updated>
   <id>https://qioh.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单的数值方法</title>
+    <link href="https://qioh.github.io/2022/03/12/num-ana/"/>
+    <id>https://qioh.github.io/2022/03/12/num-ana/</id>
+    <published>2022-03-12T03:41:44.000Z</published>
+    <updated>2022-03-12T03:44:46.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hello <div class="pdf-container" data-target="myode.pdf" data-height="500px"></div></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hello &lt;div class=&quot;pdf-container&quot; data-target=&quot;myode.pdf&quot; data-height=&quot;500px&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Numerical Analysis" scheme="https://qioh.github.io/tags/Numerical-Analysis/"/>
+    
+  </entry>
   
   <entry>
     <title>矩阵与网络</title>
