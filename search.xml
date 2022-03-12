@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>简单的数值方法</title>
+    <url>/2022/03/12/num-ana/</url>
+    <content><![CDATA[<p>（试点新玩意）</p>
+<span id="more"></span>
+<div class="pdf-container" data-target="./myode.pdf" data-height="500px"></div>
+]]></content>
+      <tags>
+        <tag>Numerical Analysis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个简单的XeLatex作业模板</title>
     <url>/2021/12/08/XeLatex-article-example/</url>
     <content><![CDATA[<p>这是一个简单的Xelatex作业模板。</p>
@@ -125,17 +136,6 @@
 ]]></content>
       <tags>
         <tag>matrix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>简单的数值方法</title>
-    <url>/2022/03/12/num-ana/</url>
-    <content><![CDATA[<p>（试点新玩意）</p>
-<span id="more"></span>
-<div class="pdf-container" data-target="./myode.pdf" data-height="500px"></div>
-]]></content>
-      <tags>
-        <tag>Numerical Analysis</tag>
       </tags>
   </entry>
   <entry>
